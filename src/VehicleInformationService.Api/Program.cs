@@ -1,11 +1,16 @@
-var builder = WebApplication.CreateBuilder(args);
+using System.Reflection;
+using VehicleInformationService.Infrastructure.Rdw;
 
+var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;
+configuration.AddUserSecrets(Assembly.GetExecutingAssembly());
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddRdwApi(configuration);
 
 var app = builder.Build();
 

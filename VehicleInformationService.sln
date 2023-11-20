@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tst", "tst", "{F139B4ED-850
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleInformationService.Api", "src\VehicleInformationService.Api\VehicleInformationService.Api.csproj", "{1FD347F7-48C9-4F0D-AD35-F0C317F8E165}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleInformationService.Application", "src\VehicleInformationService.Application\VehicleInformationService.Application.csproj", "{38923FA5-E3D2-414C-9821-C68D8D4D57E3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleInformationService.Infrastructure.Rdw", "src\VehicleInformationService.Infrastructure.Rdw\VehicleInformationService.Infrastructure.Rdw.csproj", "{01C2BACC-D293-4664-8F4E-AF6781376438}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleInformationService.Domain", "src\VehicleInformationService.Domain\VehicleInformationService.Domain.csproj", "{B04E72C6-9271-443E-84BD-7B2B63E1BAFF}"
@@ -25,10 +23,6 @@ Global
 		{1FD347F7-48C9-4F0D-AD35-F0C317F8E165}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FD347F7-48C9-4F0D-AD35-F0C317F8E165}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FD347F7-48C9-4F0D-AD35-F0C317F8E165}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38923FA5-E3D2-414C-9821-C68D8D4D57E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38923FA5-E3D2-414C-9821-C68D8D4D57E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38923FA5-E3D2-414C-9821-C68D8D4D57E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38923FA5-E3D2-414C-9821-C68D8D4D57E3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{01C2BACC-D293-4664-8F4E-AF6781376438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{01C2BACC-D293-4664-8F4E-AF6781376438}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01C2BACC-D293-4664-8F4E-AF6781376438}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,7 +37,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1FD347F7-48C9-4F0D-AD35-F0C317F8E165} = {35B3E4CD-7A49-4978-9F5D-4DF11CA9A1BC}
-		{38923FA5-E3D2-414C-9821-C68D8D4D57E3} = {35B3E4CD-7A49-4978-9F5D-4DF11CA9A1BC}
 		{01C2BACC-D293-4664-8F4E-AF6781376438} = {35B3E4CD-7A49-4978-9F5D-4DF11CA9A1BC}
 		{B04E72C6-9271-443E-84BD-7B2B63E1BAFF} = {35B3E4CD-7A49-4978-9F5D-4DF11CA9A1BC}
 	EndGlobalSection

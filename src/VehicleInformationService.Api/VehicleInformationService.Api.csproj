@@ -4,10 +4,15 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>661f678e-29ec-4ea5-963c-fbd49f795dd5</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleInformationService.Infrastructure.Rdw\VehicleInformationService.Infrastructure.Rdw.csproj" />
   </ItemGroup>
 
 </Project>
