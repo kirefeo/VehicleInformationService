@@ -1,7 +1,6 @@
-﻿namespace VehicleInformationService.Domain.Interfaces
+﻿namespace VehicleInformationService.Domain.Interfaces;
+
+public interface IVehicleInformationRepository
 {
-    public interface IVehicleInformationRepository
-    {
-        Task<object> GetVehicleInformation();
-    }
+    Task<object> GetVehicleInformation();
 }

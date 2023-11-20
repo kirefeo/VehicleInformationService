@@ -1,24 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
+using System.Net;
 using VehicleInformationService.Domain.Interfaces;
 
-namespace VehicleInformationService.Api.Controllers
+namespace VehicleInformationService.Api.Controllers;
+
+[Route("[controller]")]
+[ApiController]
+public class VehicleInformationController : ControllerBase
 {
-    [Route("[controller]")]
-    [ApiController]
-    public class VehicleInformationController : ControllerBase
+    private readonly IVehicleInformationRepository _vehicleInformationRepository;
+
+    public VehicleInformationController(IVehicleInformationRepository vehicleInformationRepository)
     {
-        private readonly IVehicleInformationRepository _vehicleInformationRepository;
+        _vehicleInformationRepository = vehicleInformationRepository;
+    }
 
-        public VehicleInformationController(IVehicleInformationRepository vehicleInformationRepository)
-        {
-            _vehicleInformationRepository = vehicleInformationRepository;
-        }
-
-        [HttpGet("vehicleinformation")]
-        public async Task<IActionResult> Get()
-        {
-            var results = await _vehicleInformationRepository.GetVehicleInformation();
-            return Ok(results);
-        }
+    [HttpGet("vehicleinformation")]
+    [SwaggerResponse((int)HttpStatusCode.OK)]
+    [SwaggerResponse((int)HttpStatusCode.Unauthorized)]
+    public async Task<IActionResult> Get()
+    {
+        var results = await _vehicleInformationRepository.GetVehicleInformation();
+        return Ok(results);
     }
 }
