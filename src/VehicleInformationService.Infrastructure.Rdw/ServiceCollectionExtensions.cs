@@ -12,7 +12,7 @@ public static class ServiceCollectionExtensions
     {
         services.AddHttpClient(OpenDataRdwClientName, client =>
         {
-            client.BaseAddress = new Uri(configuration["RdwApi:BaseUrl"]);
+            client.BaseAddress = new Uri(configuration["RdwApi:BaseUrl"]!);
             client.DefaultRequestHeaders.Add("Accept", "application/json");
             client.DefaultRequestHeaders.Add("X-App-Token", configuration["RdwApi:AppToken"]);
         });

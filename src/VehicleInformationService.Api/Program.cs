@@ -10,6 +10,7 @@ configuration.AddUserSecrets(Assembly.GetExecutingAssembly());
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddApplicationInsightsTelemetry();
 builder.Services.AddSwaggerGen(x =>
 {
     x.AddSecurityDefinition(ApiKeyMiddleware.ApiKey, new OpenApiSecurityScheme
@@ -46,7 +47,6 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    
 }
 else
 {

@@ -1,4 +1,5 @@
-﻿using System.Net.Http.Json;
+﻿using Microsoft.Extensions.Logging;
+using System.Net.Http.Json;
 using VehicleInformationService.Domain.Interfaces;
 using VehicleInformationService.Domain.Models;
 
@@ -9,11 +10,12 @@ public class LicensedVehicleRepository : ILicensedVehicleRepository
     private const string LicensedVehicleResource = "resource/m9d7-ebf2.json";
     private const int ResultLimit = 50;
     private readonly HttpClient _httpClient;
+    private readonly ILogger<LicensedVehicleRepository> _log;
 
-
-    public LicensedVehicleRepository(IHttpClientFactory httpClientFactory)
+    public LicensedVehicleRepository(IHttpClientFactory httpClientFactory, ILogger<LicensedVehicleRepository> log)
     {
         _httpClient = httpClientFactory.CreateClient(ServiceCollectionExtensions.OpenDataRdwClientName);
+        _log = log;
     }
 
     public async Task<IReadOnlyCollection<LicensedVehicle>> GetLicensedVehicles(string? licensePlate, string? brand, string? type)
@@ -30,8 +32,10 @@ public class LicensedVehicleRepository : ILicensedVehicleRepository
         var queryParameterString = $"$where={string.Join(" AND ", queryParameters)}";
 
         var response = await _httpClient.GetAsync($"{LicensedVehicleResource}?{queryParameterString}&$limit={ResultLimit}");
-        var information = await response.Content.ReadFromJsonAsync<LicensedVehicleDto[]>();
+        var licensedVehicles = await response.Content.ReadFromJsonAsync<LicensedVehicleDto[]>();
 
-        return information.ToModel();
+        _log.LogDebug($"{licensedVehicles?.Length} licensed vehicles found");
+
+        return licensedVehicles.ToModel();
     }
 }
