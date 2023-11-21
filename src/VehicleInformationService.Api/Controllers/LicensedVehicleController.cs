@@ -19,6 +19,7 @@ public class LicensedVehicleController : ControllerBase
 
     [HttpGet]
     [SwaggerResponse((int)HttpStatusCode.OK, Type = typeof(IReadOnlyCollection<LicensedVehicle>))]
+    [SwaggerResponse((int)HttpStatusCode.BadRequest)]
     [SwaggerResponse((int)HttpStatusCode.Unauthorized)]
     public async Task<IActionResult> Get(string? licensePlate, string? brand, string? type)
     {

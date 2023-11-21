@@ -33,7 +33,7 @@ builder.Services.AddSwaggerGen(x =>
                 },
                 In = ParameterLocation.Header
             },
-            new string[]{}
+            Array.Empty<string>()
         }
     });
 });
