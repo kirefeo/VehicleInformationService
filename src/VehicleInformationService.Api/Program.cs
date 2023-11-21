@@ -46,9 +46,12 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    
 }
-
-app.UseMiddleware<ApiKeyMiddleware>();
+else
+{
+    app.UseMiddleware<ApiKeyMiddleware>();
+}
 
 app.UseHttpsRedirection();
 

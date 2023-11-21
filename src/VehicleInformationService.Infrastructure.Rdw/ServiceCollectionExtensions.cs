@@ -17,6 +17,6 @@ public static class ServiceCollectionExtensions
             client.DefaultRequestHeaders.Add("X-App-Token", configuration["RdwApi:AppToken"]);
         });
 
-        services.AddTransient<IVehicleInformationRepository, VehicleInformationRepository>();
+        services.AddTransient<ILicensedVehicleRepository, LicensedVehicleRepository>();
     }
 }
