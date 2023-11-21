@@ -13,6 +13,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleInformationService.I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleInformationService.Domain", "src\VehicleInformationService.Domain\VehicleInformationService.Domain.csproj", "{B04E72C6-9271-443E-84BD-7B2B63E1BAFF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{2876786F-372C-45CD-9AAC-320430C5667D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{D320FEAF-33B5-4A4A-8AE4-C60DC3B03EE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleInformationService.IntegrationTests", "tst\IntegrationTests\VehicleInformationService.IntegrationTests\VehicleInformationService.IntegrationTests.csproj", "{7C15E248-7EA0-474D-ABFA-AD13AEF79BB3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleInformationService.Api.Tests", "tst\UnitTests\VehicleInformationService.Api.Tests\VehicleInformationService.Api.Tests.csproj", "{D809295E-1072-45B0-8EB3-CD097B229ACD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +39,14 @@ Global
 		{B04E72C6-9271-443E-84BD-7B2B63E1BAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B04E72C6-9271-443E-84BD-7B2B63E1BAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B04E72C6-9271-443E-84BD-7B2B63E1BAFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C15E248-7EA0-474D-ABFA-AD13AEF79BB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C15E248-7EA0-474D-ABFA-AD13AEF79BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C15E248-7EA0-474D-ABFA-AD13AEF79BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C15E248-7EA0-474D-ABFA-AD13AEF79BB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D809295E-1072-45B0-8EB3-CD097B229ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D809295E-1072-45B0-8EB3-CD097B229ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D809295E-1072-45B0-8EB3-CD097B229ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D809295E-1072-45B0-8EB3-CD097B229ACD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +55,10 @@ Global
 		{1FD347F7-48C9-4F0D-AD35-F0C317F8E165} = {35B3E4CD-7A49-4978-9F5D-4DF11CA9A1BC}
 		{01C2BACC-D293-4664-8F4E-AF6781376438} = {35B3E4CD-7A49-4978-9F5D-4DF11CA9A1BC}
 		{B04E72C6-9271-443E-84BD-7B2B63E1BAFF} = {35B3E4CD-7A49-4978-9F5D-4DF11CA9A1BC}
+		{2876786F-372C-45CD-9AAC-320430C5667D} = {F139B4ED-850A-4FB5-AEB0-8F7B96674D02}
+		{D320FEAF-33B5-4A4A-8AE4-C60DC3B03EE6} = {F139B4ED-850A-4FB5-AEB0-8F7B96674D02}
+		{7C15E248-7EA0-474D-ABFA-AD13AEF79BB3} = {D320FEAF-33B5-4A4A-8AE4-C60DC3B03EE6}
+		{D809295E-1072-45B0-8EB3-CD097B229ACD} = {2876786F-372C-45CD-9AAC-320430C5667D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E992E2C7-6501-42B8-8D3D-6A77EA9BA504}
